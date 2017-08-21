@@ -1,0 +1,11 @@
+{
+  "name"             : "yachtfocus/YachtPresentation_Proxy",
+  "minimum-stability": "stable",
+  "license"          : "proprietary",
+  "description"      : "Create a typed object from the YachtPresentation plug-in proxy",
+  "autoload"         : {
+    "psr-4": {
+      "YachtFocus\\": "src/YachtFocus/"
+    }
+  }
+}
