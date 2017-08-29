@@ -55,14 +55,14 @@ class Proxy
             $document    = json_decode($remoteContent);
             $documentJs  = [];
             $documentCss = [];
-        }
 
-        if (json_last_error()) {
-            return new Document(
-                $remoteContent,
-                $documentJs,
-                $documentCss
-            );
+            if (json_last_error()) {
+                return new Document(
+                    $remoteContent,
+                    $documentJs,
+                    $documentCss
+                );
+            }
         }
 
         foreach ($document->js as $js) {
