@@ -27,6 +27,8 @@ This small library facilitates the communication between a YachtPresentation and
         exit;
     }
     
+    echo $document->getTitle() ?: 'Mijn Eigen Title';
+    
     foreach ($document->getCss() as $cssElement) {
         if ($cssElement->getType()->equalTo(ElementType::INLINE())) {
             echo '<style>' . $cssElement->getValue() . '</style>';
