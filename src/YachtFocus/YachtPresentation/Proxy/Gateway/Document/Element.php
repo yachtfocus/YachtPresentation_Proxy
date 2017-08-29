@@ -31,8 +31,6 @@ class Element implements JsonSerializable
 
     /**
      * @return Type
-     *
-     * @codeCoverageIgnore
      */
     public function getType()
     {
@@ -41,14 +39,15 @@ class Element implements JsonSerializable
 
     /**
      * @return string
-     *
-     * @codeCoverageIgnore
      */
     public function getValue()
     {
         return $this->value;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function jsonSerialize()
     {
         return [

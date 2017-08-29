@@ -95,7 +95,7 @@ class Document implements JsonSerializable
      *
      * @return Document
      */
-    public function setJs(Element ...$js)
+    public function setJs(array $js)
     {
         $this->js = $js;
 
@@ -115,13 +115,16 @@ class Document implements JsonSerializable
      *
      * @return Document
      */
-    public function setCss(Element ...$css)
+    public function setCss(array $css)
     {
         $this->css = $css;
 
         return $this;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function jsonSerialize()
     {
         return [
